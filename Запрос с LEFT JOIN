@@ -1,0 +1,7 @@
+SELECT 
+products.id_product	AS id_product,
+products.name AS name,
+products_stores.id_store AS id_store 
+FROM
+	products 
+LEFT JOIN products_stores ON products_stores.id_product=products.id_product;
