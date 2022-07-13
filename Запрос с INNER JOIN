@@ -1,0 +1,11 @@
+SELECT 
+products.name AS name,
+products.category AS category,
+products.units AS units,
+products.weight AS weight,
+products_stores.price AS price
+FROM
+	products
+INNER JOIN products_stores ON products_stores.id_product= products.id_product
+WHERE 
+CAST(products_stores.date_upd AS date)='2019-06-13' AND products.units='мл';
