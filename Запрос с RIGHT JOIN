@@ -1,0 +1,6 @@
+SELECT 
+CAST(weather.date AS date) AS date
+FROM
+	transactions
+RIGHT JOIN weather ON CAST(weather.date AS date) = CAST(transactions.date AS date)
+WHERE transactions.date IS NULL ;
