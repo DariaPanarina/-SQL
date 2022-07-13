@@ -1,0 +1,12 @@
+SELECT
+CAST(weather.date AS date),
+weather.temp,
+weather.rain,
+products.name
+FROM 
+	weather
+LEFT JOIN transactions ON CAST(weather.date AS date) = CAST(transactions.date AS date)
+LEFT JOIN products ON products.id_product = transactions.id_product
+ORDER BY 
+weather.date DESC
+LIMIT 30; 
