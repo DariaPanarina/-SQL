@@ -1,0 +1,6 @@
+SELECT 
+SUM (price) AS summa	
+FROM
+	products_data_all
+WHERE
+name_store='Молочные вкусности'
