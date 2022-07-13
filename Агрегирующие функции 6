@@ -1,0 +1,6 @@
+SELECT 
+MAX(price) - MIN(price) as max_min_diff
+FROM
+	products_data_all
+WHERE
+name='Масло топленое Ecotavush 99%, 500 г' AND name_store='ВкусМилк';
